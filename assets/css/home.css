@@ -1,0 +1,29 @@
+.main-container1{
+    position: relative;
+    top: 10%;
+    left: 36%;
+}
+.main-container1 button{
+    color: #ffffff;
+    background-color: #2d63c8;
+    font-size: 19px;
+    border: 1px solid #2d63c8;
+    border-radius: 46px;
+    padding: 15px 50px;
+    cursor: pointer
+}
+
+
+/* button {
+    color: #ffffff;
+    background-color: #2d63c8;
+    font-size: 19px;
+    border: 1px solid #2d63c8;
+    border-radius: 46px;
+    padding: 15px 50px;
+    cursor: pointer
+} */
+button:hover {
+    color: #d3cd17;
+    background-color: #ffffff;
+}

@@ -14,19 +14,6 @@ const UserSchema = new mongoose.Schema({
         type : 'String',
         required : true
     },
-    isAdmin : {
-        type : 'Boolean',
-        required : true
-    },
-    userToReview : [{
-        type : mongoose.Schema.Types.ObjectId,
-        ref : 'User'
-    }],
-    // recieved review from another people
-    reviewRecivedFrom: [{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Review',
-        }]
 }, 
 {
     timestamps : true

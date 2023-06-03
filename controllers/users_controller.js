@@ -15,7 +15,7 @@ module.exports.signUp = function (req, res){
 
 
     return res.render('sign_up',{
-        title:"Sign Up | EmpReview System"
+        title:"Sign Up | HabitTracker"
     })
 };
 
@@ -27,7 +27,7 @@ module.exports.signIn = function (req, res){
 
 
     return res.render('sign_in',{
-        title:"Sign In | EmpReview System"
+        title:"Sign In | HabitTracker"
     })
 };
 
@@ -60,6 +60,7 @@ module.exports.create = async function(req, res) {
         const user = await User.findOne({ email: req.body.email }).exec();
         if (!user) {
             await User.create({...req.body, isAdmin: false});
+            console.log(req.body);
             return res.redirect('/users/sign-in');
         } else {
             return res.redirect('back');

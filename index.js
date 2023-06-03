@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
 
-const port = 9000;
+const port = 7000;
 
 
 app.use(cookieParser());
@@ -43,22 +43,26 @@ app.set('views', './views');
 
 
 app.use(session({
-    name: 'EmpRSystem',
+    name: 'HabitTracker',
     // todo change secret before 
-    secret:'boloharharmahadevkijay',
+    secret:'boloharharmahadevkijaykyahaal',
     saveUninitialized: false,
     resave: false,
     cookie: {
         maxAge : (1000 * 60 * 100)
     },
     store: MongoStore.create({
-            mongoUrl:'mongodb://localhost/EmpReviewSys',
+            mongoUrl:'mongodb://localhost/HabitTracker',
             autoRemove:"disabled"
+            
     },
     function(err){
-        console.log(err || 'connect-mongodb setup ok');
+        if (err) {
+            console.log('Error:', err);
+        } else {
+            console.log('connect-mongodb setup ok');
+        }
     })
-    
     
 
 }));

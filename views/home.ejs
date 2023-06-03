@@ -1,3 +1,14 @@
-<h1>
-    Employee / <%= title %>
-</h1>
+<link rel="stylesheet" href="/css/home.css">
+
+
+<div class="main-container1">
+    <% if(locals.user){ %>
+        <form action="/" id="new-post-form" method="POST">
+            <button type="button" name="Add New Habit">Add New Habit</button>
+            <button type="button" name="Show My Strek">Show My Strek</button>
+            
+            
+        </form>
+        <% } %>
+
+</div>

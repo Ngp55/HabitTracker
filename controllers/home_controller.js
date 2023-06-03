@@ -1,8 +1,24 @@
-module.exports.home = function(req, res){
-    // console.log(req.cookies);
-    // res.cookie('user_id', 24);
-    return res.render('home',{
-        title: "HomePage",
-        body:"Employee Review System Home Page"
+
+const Habit = require('../models/habit');
+const User = require('../models/user');
+
+
+module.exports.home = async function(req, res) {
+
+  try{
+   
+    let habits = await Habit.find({});
+    let users = await User.find({});
+
+    return res.render('home', {
+      title: "HabitTracker | Home",
+      habits:  habits,
+      users:users
+      
     });
-} 
+  }
+  catch(err){
+    console.log('ErroR ',err);
+    return;
+  } 
+};
