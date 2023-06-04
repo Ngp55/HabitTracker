@@ -15,18 +15,15 @@ const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 const MongoStore = require('connect-mongo');
 
-
+// --------------Static files--------//
 // app.use(express.urlencoded());
+
 app.use(express.urlencoded({ extended: true }));
-
-
 app.use(express.static('./assets'));
 
-
+// ------ EJS layouts ------//
 // it is important to call expresslayouts before routes
 app.use(expressLayouts);
-
-
 // extracting style and scripts from sub pages in to the layout
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
@@ -35,13 +32,11 @@ app.set('layout extractScripts', true);
 
 
 
-
+// ------ EJS ------//
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
 //mongo store is used to store the session cookie in the db
-
-
 app.use(session({
     name: 'HabitTracker',
     // todo change secret before 

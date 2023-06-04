@@ -3,12 +3,61 @@
 
 <div class="main-container1">
     <% if(locals.user){ %>
-        <form action="/" id="new-post-form" method="POST">
-            <button type="button" name="Add New Habit">Add New Habit</button>
-            <button type="button" name="Show My Strek">Show My Strek</button>
-            
-            
-        </form>
+        <div class="box1">
+            <form action="/" id="new-post-form" method="POST">
+                <a href="/habits/create-habits" class="button" >Add New Habit</a>
+                <a href="" class="button" >Show My Strek</a>
+                
+                
+            </form>
+
+        </div>
+        <div class="box2">
+            <div class="box-child">
+                <div class="grand-child1"><%= habits.name %></div>
+                
+                <div class="grand-child2">
+                    <p class="alinep"><%= habits.goal %></p> 
+                </div>
+              
+                <div class="grand-child3">
+                    <p class="alinep">Streak :4/7 </p> 
+                </div>
+                
+                <div class="grand-child4">
+                    <p class="alinep"><%= habits.time %> <%= habits.frequency %> </p> 
+                </div>
+                <div class="grand-child5">
+                    <form style="width: 150px;">
+                        <select id="frequency" name="frequency">
+                            <option value="twice_a_day">Twice a Day</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                        </select><br>
+                        
+                        <input type="submit" name="submit">
+
+
+                    </form> 
+                </div>
+                <div class="grand-child6">
+                    <p><a href="" class="button aline" >Remove Habit</a>  </p> 
+                </div> 
+            </div>
+
+        </div>
+        <% } else { %>
+                
+            <div class="container">
+                <h1>Please Log In to Track or Add Habit</h1>
+                <p>Log in to start tracking your habits and improve your daily routine!</p>
+                <a href="/users/sign-in" class="button">Log In</a>
+                <p>Or</p>
+                <a href="/users/sign-up" class="button">Sign Up</a>
+              </div>
+
         <% } %>
 
 </div>
+
+

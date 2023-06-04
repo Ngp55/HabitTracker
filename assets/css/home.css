@@ -1,3 +1,8 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
 .main-container1{
     position: relative;
     top: 10%;
@@ -26,4 +31,89 @@
 button:hover {
     color: #d3cd17;
     background-color: #ffffff;
+}  .container {
+    position: relative;
+    top: 30%;
+    left: -30%;
+
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+
+  }
+
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+
+  p {
+    color: #666;
+    text-align: center;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+/* design for displaying data */
+.box2 {
+  width: 300px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 2px solid blue;
+}
+.aline{
+  align-items: end;
+  background-color: #f03a0d;
+}
+.alinep{
+  text-align: right;
+}
+
+.box-child {
+  margin-bottom: 10px;
+  border: 2px solid cyan;
+}
+
+.grand-child1 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.grand-child2 p,
+.grand-child3 p,
+.grand-child4 p {
+  margin: 0;
+}
+
+.grand-child5 select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.grand-child6 {
+  text-align: right;
+}
+
+.grand-child6 p {
+  margin: 0;
+  color: red;
+  cursor: pointer;
 }
