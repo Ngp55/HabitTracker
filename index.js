@@ -1,10 +1,11 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const moment = require("moment");
 const app = express();
 
 const port = 7000;
 
-
+moment().format();
 app.use(cookieParser());
 const expressLayouts = require('express-ejs-layouts');
 

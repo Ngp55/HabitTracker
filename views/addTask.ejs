@@ -3,14 +3,36 @@
 
 <div class="main-container">
     <div class="child">
-        
+<!--         
+        <form id="habit-form" action="/habits/create-habitsone" method="post">
+            <div class="labelContainer">
+                <div class="label">Habit Name</div>
+    
+                <input type="text" name="habit_name" class="habit-details-input"
+                    placeholder="Enter Habit You Want To Create" required>
+            </div>
+            <div class="labelContainer">
+                <div class="label">Starting Date</div>
+                <input type="date" name="start">
+            </div>
+            <div class="labelContainer">
+                <div class="label">Ending Date</div>
+                <input type="date" name="end">
+            </div>
+    
+            <div class="labelContainer">
+                <button id="addBtn" class="btn btn-primary type=" submit">Add Habit</button>
+            </div>
+        </form> -->
         <form id="habit-form" action="/habits/create-habitsone" method="post">
             <label for="name">What habit you want to Create (*):</label>
             <input type="text" id="name" name="name" placeholder="Enter the name" required><br>
             <label for="goal">What do you want to Achieve (*):</label>
             <input type="text" id="goal" name="goal" placeholder="Enter your goal" required><br>
+            <label for="date">Start Date :</label>
+            <input type="date" id="sdate" name="sdate" placeholder="mm/dd/yyyy" ><br>
             <label for="date">End Date :</label>
-            <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" ><br>
+            <input type="date" id="edate" name="edate" placeholder="mm/dd/yyyy" ><br>
             <label for="time">Time:</label>
             <input type="time" id="time" name="time"><br>
             <label for="frequency">Frequency:</label>

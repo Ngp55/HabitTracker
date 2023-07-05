@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weekly Habits</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weekly Habits</h1>
+
+    <% if (habits.length === 0) { %>
+      <p>No habits found for this week.</p>
+    <% } else { %>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Goal</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Time</th>
+          
+        </tr>
+        <% habits.forEach(habit => { %>
+          <tr>
+            <td><%= habit.name %></td>
+            <td><%= habit.goal %></td>
+            <td><%= habit.sdate.toDateString() %></td>
+            <td><%= habit.edate.toDateString() %></td>
+            
+            <td><%= habit.frequency %></td>
+          </tr>
+        <% }); %>
+      </table>
+    <% } %>
+  </body>
+</html>

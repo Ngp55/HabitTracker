@@ -7,6 +7,7 @@ module.exports.home = async function(req, res) {
 
   try{
    
+    //let habits = await Habit.find({});
     let habits = await Habit.find({},'name goal');
     let users = await User.find({});
 
