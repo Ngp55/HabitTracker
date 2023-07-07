@@ -4,7 +4,11 @@ const passport = require('passport');
 
 const habitsController = require('../controllers/week_controller');
 
-router.get('/show-weekly',passport.checkAuthentication,habitsController.weekhome);
+router.get('/show-weekly',passport.checkAuthentication,habitsController.showWeeklyHabits);
+
+router.get('/show-weeklypre',passport.checkAuthentication,habitsController.goToPreviousWeek);
+
+router.get('/show-weeklynext',passport.checkAuthentication,habitsController.goToNextWeek);
 
 
 

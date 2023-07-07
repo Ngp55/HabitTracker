@@ -1,26 +1,31 @@
   <link rel="stylesheet" href="/css/home.css">
 
 <body>
-  
-  <h1>Weekly Calendar</h1>
-  <div class="btn-container">
-    <button id="prev-week-btn">Previous Week</button>
-    <button id="next-week-btn">Next Week</button>
-  </div>
-
-  <table class="calendar">
-    <thead id="calendar-head">
-      <!-- Calendar head content will be added dynamically using JavaScript -->
+  <h1>Weekly Habits</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Habit Name</th>
+      </tr>
     </thead>
-    <tbody id="calendar-body">
-      <!-- Calendar body content will be added dynamically using JavaScript -->
+    <tbody>
+      <% for (let habit of habits) { %>
+        <tr>
+          <td><%= habit.sdate %></td>
+          <td><%= habit.name %></td>
+        </tr>
+        <% } %> 
     </tbody>
   </table>
-
-  
+  <p>
+    <a href="/nextWeek">Next Week</a>
+    <a href="/previousWeek">Previous Week</a>
+  </p>
+    
 </body>
 
-<script src="dist/bundle.js">
+
 
 
 </script>
