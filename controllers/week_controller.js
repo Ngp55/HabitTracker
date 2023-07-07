@@ -26,10 +26,7 @@ const Habit = require('../models/habit');
 module.exports.weekhome = async (req, res) => {
   try {
     const currentDate = new Date();
-    const habits = await Habit.find({
-      sdate: { $lte: currentDate },
-      edate: { $gte: currentDate },
-    });
+    const habits = await Habit.find({    });
 
     res.render('weekly', { 
       title:"weekly",

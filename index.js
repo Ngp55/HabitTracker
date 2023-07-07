@@ -69,7 +69,13 @@ app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 //Using express router
 app.use('/', require('./routes'));
-
+app.get('/dist/bundle.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'bundle.js'), {
+      headers: {
+        'Content-Type': 'text/javascript', // Set the MIME type to text/javascript
+      },
+    });
+  });
 
 app.listen(port , function(error){
     if(error){
