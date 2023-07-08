@@ -6,11 +6,7 @@ const habitsController = require('../controllers/habit_controller');
 
 router.get('/create-habits',passport.checkAuthentication,habitsController.addHabitPage);
 router.post('/create-habitsone',passport.checkAuthentication,habitsController.createHabit);
-
-router.get('/get-Habit',passport.authenticate,habitsController.GetHabit);
-
-router.post('/update-Habit',passport.authenticate,habitsController.UpdateHabit);
-router.post('/delete-Habit',passport.authenticate,habitsController.deleteHabit);
+router.get('/delete-Habit/:id',passport.checkAuthentication,habitsController.deleteHabit);
 
 
 module.exports = router;

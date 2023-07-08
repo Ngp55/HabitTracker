@@ -16,6 +16,7 @@
             <div class="box-child">
                 <% for (let habit of habits) { %>
                     <div class="grand-child1"><%= habit.name %></div>
+                    <div class="grand-child1"><%= habit.id %></div>
             
                     <div class="grand-child2">
                         <p class="alinep"><%= habit.goal %></p>
@@ -41,7 +42,7 @@
                     </div>
                     <div class="grand-child6">
 
-                        <p><a href="/habits/delete-Habit" class="button aline">Remove Habit</a></p>
+                        <p><a href="/habits/delete-Habit/<%= habit.id%>" class="button aline">Remove Habit</a></p>
                     </div>
                     <% } %> 
             </div>
