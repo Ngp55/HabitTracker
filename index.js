@@ -48,7 +48,7 @@ app.use(session({
         maxAge : (1000 * 60 * 100)
     },
     store: MongoStore.create({
-            mongoUrl:'mongodb://localhost/HabitTracker',
+            mongoUrl:'mongodb+srv://asdfrajkumar1122:UIfvIeGADP7LG5yD@cluster0.1tprpsp.mongodb.net/Habittracker?retryWrites=true&w=majorityer',
             autoRemove:"disabled"
             
     },
