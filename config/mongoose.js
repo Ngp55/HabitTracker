@@ -1,12 +1,22 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/HabitTracker');
+const mongoose = require('mongoose')
 
-const db = mongoose.connection;
+mongoose.set('strictQuery', false);
 
-db.on('error', console.error.bind(console,"ErroR in connection database"));
+const url = `mongodb+srv://asdfrajkumar1122:UIfvIeGADP7LG5yD@cluster0.1tprpsp.mongodb.net/Habittracker?retryWrites=true&w=majority`;
 
-db.once('open', function(){
-    console.log('Konnected to Database:: MongoDB')
-});
 
-module.exports = db;
+const connectionParams={
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
+}
+mongoose.connect(url,connectionParams)
+    .then( () => {
+        console.log('Connected to database ')
+    })
+    .catch( (err) => {
+        console.error(`Error connecting to the database. \n${err}`);
+    })
+
+    const db = mongoose.connection;
+
+    module.exports = db;
